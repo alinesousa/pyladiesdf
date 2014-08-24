@@ -1,0 +1,9 @@
+*.pyc
+*.db
+media_files/*.jpg
+media_files/*.png
+bin/
+include/
+lib/
+local/
+man/
