@@ -1,7 +1,7 @@
 # coding: utf-8
 from os import path
 from flask import Flask
-from .blueprints.noticias import noticias_blueprint
+from .blueprints.pyladiesbsb import pyladiesbsb_blueprint
 
 
 def create_app(mode):
@@ -22,6 +22,6 @@ def create_app(mode):
         app.config.get('MEDIA_FOLDER')
     )
 
-    app.register_blueprint(noticias_blueprint)
+    app.register_blueprint(pyladiesbsb_blueprint)
 
     return app
