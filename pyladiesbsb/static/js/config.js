@@ -5,7 +5,7 @@
 */
 
 window._skel_config = {
-	prefix: 'css/style',
+	prefix: '/static/css/style',
 	resetCSS: true,
 	boxModel: 'border',
 	grid: {

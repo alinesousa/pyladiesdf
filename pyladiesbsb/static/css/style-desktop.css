@@ -1,5 +1,5 @@
 /*
-	Strongly Typed 1.1 by HTML5 UP
+	Strongly Typed by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -30,24 +30,27 @@
 		margin: 0 0 1.25em 0;
 	}
 
-	/* Tables */
+	/* Table */
 	
 		table
 		{
 		}
 		
-			table.style1
+			table.default
 			{
 			}
 			
-				table.style1 thead
+				table.default thead
 				{
 					font-size: 0.85em;
 					letter-spacing: 2px;
 				}
 
-	/* Buttons */
+	/* Button */
 		
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
 		.button
 		{
 			font-size: 0.85em;
@@ -55,7 +58,7 @@
 			padding: 0.85em 2.75em 0.85em 2.75em;
 		}
 		
-	/* Lists */
+	/* List */
 
 		ul.actions
 		{
@@ -82,39 +85,33 @@
 				padding: 2.5em 0 0 0;
 			}
 
-/*********************************************************************************/
-/* Section/Article Types                                                         */
-/*********************************************************************************/
+	/* Box */
 
-	.is-post
-	{
-	}
-	
-		.no-sidebar .is-post > header
+		.box
 		{
-			text-align: center;
 		}
 
-	.is-feature
-	{
-	}
-	
-	.is-excerpt
-	{
-	}
-	
-		.is-excerpt .date
-		{
-			display: inline-block;
-			font-size: 0.85em;
-			letter-spacing: 2px;
-			padding: 0.25em 1em 0.25em 1em;
-			margin: 0 0 2.5em 0;
-		}
-	
-	.is-highlight
-	{
-	}
+			.box.post
+			{
+			}
+			
+				.no-sidebar .box.post > header
+				{
+					text-align: center;
+				}
+
+			.box.excerpt
+			{
+			}
+			
+				.box.excerpt .date
+				{
+					display: inline-block;
+					font-size: 0.85em;
+					letter-spacing: 2px;
+					padding: 0.25em 1em 0.25em 1em;
+					margin: 0 0 2.5em 0;
+				}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
@@ -215,6 +212,12 @@
 		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
 		padding: 0.75em 0 0.5em 0;
 		min-width: 12em;
+		margin-top: -moz-calc(-0.5em + 1px);
+		margin-top: -webkit-calc(-0.5em + 1px);
+		margin-top: -o-calc(-0.5em + 1px);
+		margin-top: -ms-calc(-0.5em + 1px);
+		margin-top: calc(-0.5em + 1px);
+		margin-left: -2px;
 	}
 	
 		.dropotron.level-0
@@ -278,7 +281,6 @@
 			-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 			transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		}
-
 	
 /*********************************************************************************/
 /* Banner                                                                        */

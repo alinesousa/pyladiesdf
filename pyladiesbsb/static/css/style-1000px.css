@@ -1,5 +1,5 @@
 /*
-	Strongly Typed 1.1 by HTML5 UP
+	Strongly Typed by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -8,7 +8,7 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body
+	body,input,textarea,select
 	{
 		line-height: 1.75em;
 		font-size: 12pt;
@@ -17,6 +17,7 @@
 	h2
 	{
 		margin: 0 0 1em 0;
+		font-size: 1.5em;
 	}
 
 	h3
@@ -29,13 +30,13 @@
 		display: none;
 	}
 
-	/* Images */
+	/* Image */
 
 		.image
 		{
 		}
 
-			.image-full
+			.image.featured
 			{
 				margin: 0 0 2.5em 0;
 			}
@@ -74,17 +75,17 @@
 
 	#header
 	{
-		padding: 12em 0 7em 0;
+		padding: 9em 0 4em 0;
 	}
 
 		#header h1
 		{
-			font-size: 2.5em;
+			font-size: 2em;
 		}
 		
 		#header p
 		{
-			margin: 2em 0 0 0;
+			margin: 1.5em 0 0 0;
 		}
 
 /*********************************************************************************/

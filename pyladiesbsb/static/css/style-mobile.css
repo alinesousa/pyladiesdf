@@ -1,5 +1,5 @@
 /*
-	Strongly Typed 1.1 by HTML5 UP
+	Strongly Typed by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -32,7 +32,7 @@
 		display: none;
 	}
 
-	/* Sections/Articles */
+	/* Sections/Article */
 	
 		section,
 		article
@@ -41,36 +41,39 @@
 			margin: 2em 0 2em 0 !important;
 		}
 
-		section > :first-child,
-		article > :first-child
-		{
-			margin-top: 0 !important;
-		}
+			section > :first-child,
+			article > :first-child
+			{
+				margin-top: 0 !important;
+			}
 
-		section:first-child,
-		article:first-child
-		{
-			margin-top: 0 !important;
-		}
+			section:first-child,
+			article:first-child
+			{
+				margin-top: 0 !important;
+			}
 
-	/* Images */
+	/* Image */
 
 		.image
 		{
 		}
 			
-			.image-left
+			.image.left
 			{
 				width: 40%;
 			}
 			
-			.image-full
+			.image.featured
 			{
 				margin: 0 0 2em 0;
 			}
 
-	/* Buttons */
+	/* Button */
 		
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
 		.button
 		{
 			letter-spacing: 2px;
@@ -78,7 +81,7 @@
 			padding: 1em 0 1em 0;
 		}
 
-	/* Lists */
+	/* List */
 
 		ul.links
 		{
@@ -108,17 +111,24 @@
 			margin: 0 0 0.5em 0 !important;
 		}
 
-	/* Forms */
+	/* Box */
 
-		form
+		.box
 		{
 		}
 		
-			form input.text,
-			form select,
-			form textarea
+			.box.excerpt
 			{
 			}
+			
+				.box-excerpt .date
+				{
+					display: block;
+					letter-spacing: 2px;
+					padding: 0.25em 1em 0.25em 1em;
+					margin: 0 auto 2.5em auto;
+					text-align: center;
+				}
 
 /*********************************************************************************/
 /* UI                                                                            */
@@ -139,7 +149,15 @@
 
 			#titleBar .toggle:before
 			{
-				content: '';
+				display: inline-block;
+				font-family: FontAwesome;
+				text-decoration: none;
+				font-style: normal;
+				font-weight: normal;
+				-webkit-font-smoothing:antialiased;
+				-moz-osx-font-smoothing:grayscale;
+				
+				content: '\f0c9';
 				display: block;
 				width: 60px;
 				height: 40px;
@@ -149,22 +167,13 @@
 				left: 5px;
 				top: 5px;
 				box-shadow: 0.125em 0.125em 0 0 rgba(0,0,0,0.15);
+				text-align: center;
+				line-height: 40px;
+				font-size: 18px;
+				color: #aaa;
 			}
 
-			#titleBar .toggle:after
-			{
-				content: '';
-				display: block;
-				width: 20px;
-				height: 12px;
-				position: absolute;
-				left: 25px;
-				top: 20px;
-				background: url('images/mobileUI-site-nav-opener-bg.svg') 0px 0px no-repeat;
-				opacity: 0.35;
-			}
-
-			#titleBar .toggle:active:after
+			#titleBar .toggle:active:before
 			{
 				opacity: 0.5;
 			}
@@ -209,35 +218,6 @@
 			#navPanel .indent-4 { display: inline-block; width: 4em; }
 			#navPanel .indent-5 { display: inline-block; width: 5em; }
 			#navPanel .depth-0 { color: #fff; }
-
-/*********************************************************************************/
-/* Section/Article Types                                                         */
-/*********************************************************************************/
-
-	.is-post
-	{
-	}
-
-	.is-feature
-	{
-	}
-	
-	.is-excerpt
-	{
-	}
-	
-		.is-excerpt .date
-		{
-			display: block;
-			letter-spacing: 2px;
-			padding: 0.25em 1em 0.25em 1em;
-			margin: 0 auto 2.5em auto;
-			text-align: center;
-		}
-	
-	.is-highlight
-	{
-	}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
@@ -367,6 +347,24 @@
 		{
 			margin: 0 !important;
 			padding: 0 !important;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+	
+		#footer .icons
+		{
+			margin: 0 0 2em 0 !important;
+		}
+		
+		#footer .icons:last-child
+		{
+			margin-bottom: 0;
 		}
 
 /*********************************************************************************/
