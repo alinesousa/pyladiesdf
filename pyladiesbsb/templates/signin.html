@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{%block content%}
+<form method="post" class="login" action="{{url_for('pyladiesbsb.signin')}}" enctype="multipart/form-data">
+   <div>
+   <label><h3>E-mail:</h3>
+        <input type="email" name="email" id="email" />
+   </label>
+ </div>
+   <div>
+   <label><h3>Senha:</h3>
+        <input type="password" name="password" id="password" />
+   </label>
+ </div>
+   <div>
+   <center><input type="submit" value="Entrar" /></center>
+   </div>
+</form>
+{%endblock%}

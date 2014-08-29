@@ -1,5 +1,5 @@
 /*
-	Strongly Typed by HTML5 UP
+	Dopetrope by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -10,54 +10,99 @@
 
 	body,input,textarea,select
 	{
-		line-height: 1.65em;
 		font-size: 13pt;
-	}
-
-	h2
-	{
-		font-size: 1.65em;
-		font-weight: 400;
-		letter-spacing: 4px;
-		margin: 0 0 1.5em 0;
 		line-height: 1.75em;
 	}
-
+	
+	h2
+	{
+		font-size: 1.5em;
+	}
+	
 	h3
 	{
-		font-size: 1em;
-		letter-spacing: 2px;
-		margin: 0 0 1.25em 0;
+		font-size: 1.35em;
 	}
 
-	/* Table */
-	
-		table
+	/* Section/Article */
+
+		header
 		{
+			margin: 0 0 1.5em 0;
 		}
 		
-			table.default
+			header > p
+			{
+				margin: 0.5em 0 0 0;
+				padding-bottom: 0.5em;
+			}
+
+			header.major
+			{
+				margin: 0 0 3em 0;
+			}
+
+		footer
+		{
+			margin: 2.25em 0 0 0;
+		}
+	
+	/* Box */
+
+		.box
+		{
+			padding: 2.75em 1.75em 2.75em 1.75em;
+		}
+		
+			.box .image.featured
+			{
+				left: 1.75em;
+				top: 1.75em;
+				margin: -4.5em 0 4.25em -3.5em;
+			}
+
+			.box.post
 			{
 			}
 			
-				table.default thead
+				.box.post header
 				{
-					font-size: 0.85em;
-					letter-spacing: 2px;
+					padding-top: 1em;
+					margin: 0 0 2em 0;
+				}
+			
+				.box.post h2
+				{
+					font-size: 2.5em;
+					letter-spacing: -0.015em;
+				}
+				
+				.box.post header > p
+				{
+					margin-top: 1.25em;
+					font-size: 1.25em;
 				}
 
 	/* Button */
-		
+	
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
 		.button
 		{
-			font-size: 0.85em;
-			letter-spacing: 2px;
-			padding: 0.85em 2.75em 0.85em 2.75em;
+			font-size: 1.1em;
+			padding: 0.65em 1.5em 0.65em 1.5em;
 		}
-		
+
+			input[type="button"].big,
+			input[type="submit"].big,
+			input[type="reset"].big,
+			.button.big
+			{
+				font-size: 1.5em;
+				padding: 0.75em 1.5em 0.75em 1.5em;
+			}
+
 	/* List */
 
 		ul.actions
@@ -75,43 +120,34 @@
 				margin-left: 0;
 			}
 
-		ul.divided
+		ul.links
 		{
 		}
 
-			ul.divided li
+			ul.links li
 			{
-				margin: 2.5em 0 0 0;
-				padding: 2.5em 0 0 0;
+				display: inline-block;
+				border-left: solid 1px rgba(255,255,255,0.05);
+				padding: 0 0 0 1em;
+				margin: 0 0 0 1em;
+			}
+			
+			ul.links li:first-child
+			{
+				border-left: 0;
+				padding-left: 0;
+				margin-left: 0;
 			}
 
-	/* Box */
-
-		.box
+		ul.social
 		{
+			margin: 0 0 3.25em 0;
 		}
 
-			.box.post
+			ul.social li
 			{
+				margin-left: 0.75em;
 			}
-			
-				.no-sidebar .box.post > header
-				{
-					text-align: center;
-				}
-
-			.box.excerpt
-			{
-			}
-			
-				.box.excerpt .date
-				{
-					display: inline-block;
-					font-size: 0.85em;
-					letter-spacing: 2px;
-					padding: 0.25em 1em 0.25em 1em;
-					margin: 0 0 2.5em 0;
-				}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
@@ -119,27 +155,28 @@
 
 	#header-wrapper
 	{
+		padding: 4.5em 0 4em 0;
 	}
 
-	#features-wrapper
-	{
-		padding: 6em 0 6em 0;
-	}
-	
-	#banner-wrapper
-	{
-		padding: 3em 0 3em 0;
-	}
-	
 	#main-wrapper
 	{
-		padding: 6em 0 6em 0;
+		padding: 4em 0 4em 0;
 	}
-	
+
 	#footer-wrapper
 	{
-		padding: 6em 0 8em 0;
+		padding: 4em 0 4em 0;
 	}
+
+		#footer-wrapper header
+		{
+			margin: 0 0 3em 0;
+		}
+		
+			#footer-wrapper header h2
+			{
+				font-size: 1.75em;
+			}
 
 /*********************************************************************************/
 /* Header                                                                        */
@@ -147,20 +184,16 @@
 
 	#header
 	{
-		padding: 14em 0 7em 0;
+		text-align: center;
 	}
 	
 		#header h1
 		{
-			font-size: 3em;
-			letter-spacing: 13px;
-		}
-		
-		#header p
-		{
-			margin: 2.5em 0 0 0;
-			font-size: 0.85em;
-			letter-spacing: 3px;
+			color: #252122;
+			font-weight: 900;
+			font-size: 2.5em;
+			letter-spacing: -0.035em;
+			margin: 0 0 1em 0;
 		}
 
 /*********************************************************************************/
@@ -169,214 +202,256 @@
 
 	#nav
 	{
-		position: absolute;
-		top: 3em;
-		left: 0;
-		width: 100%;
 	}
+
+		#nav > ul
+		{
+			margin: 0;
+		}
+
+		#nav > ul > li > ul
+		{
+			display: none;
+		}
 
 		#nav > ul > li
 		{
 			display: inline-block;
-			padding-right: 2em;
+			font-style: italic;
+			margin: 0 0.35em 0 0.35em;
 		}
 		
-			#nav > ul > li:last-child
-			{
-				padding-right: 0;
-			}
-
 			#nav > ul > li > a
 			{
-				display: block;
+				border-radius: 5px;
+				color: #5d5d5d;
+				text-decoration: none;
+				padding: 0.6em 1.2em 0.6em 1.2em;
+				-moz-transition: background-color .25s ease-in-out;
+				-webkit-transition: background-color .25s ease-in-out;
+				-o-transition: background-color .25s ease-in-out;
+				-ms-transition: background-color .25s ease-in-out;
+				transition: background-color .25s ease-in-out;
+				outline: 0;
 			}
 
-				#nav > ul > li > a > span
-				{
-					font-size: 0.85em;
-					letter-spacing: 3px;
-				}
-
-			#nav > ul > li > ul
+		#nav > ul > li:hover
+		{
+		}
+		
+			#nav > ul > li:hover > a
 			{
-				display: none;
+				background: #f3f3f3;
 			}
-	
+			
+		#nav > ul > li.active
+		{
+		}
+		
+			#nav > ul > li.active > a
+			{
+				background: #f3f3f3;
+			}
+			
+		#nav > ul > li.current
+		{
+		}
+		
+			#nav > ul > li.current > a
+			{
+				background: #d52349;
+				color: #fff !important;
+				font-weight: 700;
+			}
+			
 	.dropotron
 	{
+		border-radius: 5px;
+		background-color: #252122;
+		background-color: rgba(34,30,31,0.98);
+		padding: 1.25em 1.5em 1.25em 1.5em;
+		font-style: italic;
+		min-width: 13em;
+		box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.5);
 		text-align: left;
-		border: solid 1px #e5e5e5;
-		border-radius: 4px;
-		background: #fff;
-		background: rgba(255,255,255,0.965);
-		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
-		padding: 0.75em 0 0.5em 0;
-		min-width: 12em;
-		margin-top: -moz-calc(-0.5em + 1px);
-		margin-top: -webkit-calc(-0.5em + 1px);
-		margin-top: -o-calc(-0.5em + 1px);
-		margin-top: -ms-calc(-0.5em + 1px);
-		margin-top: calc(-0.5em + 1px);
-		margin-left: -2px;
+		margin-top: -1.25em;
+		margin-left: -1px;
 	}
 	
-		.dropotron.level-0
+		.dropotron a,
+		.dropotron span
 		{
-			margin-top: 1.5em;
-			margin-left: -1em;
+			color: #aaa;
+			text-decoration: none;
+			-moz-transition: color .25s ease-in-out;
+			-webkit-transition: color .25s ease-in-out;
+			-o-transition: color .25s ease-in-out;
+			-ms-transition: color .25s ease-in-out;
+			transition: color .25s ease-in-out;
+		}
+		
+		.dropotron li
+		{
+			padding: 0.25em 0 0.25em 0;
 		}
 
-			.dropotron.level-0:after
+			.dropotron li:hover > a,
+			.dropotron li:hover >span
 			{
-				content: '';
-				display: block;
-				position: absolute;
-				left: 1.25em;
-				top: -moz-calc(-0.75em + 1px);
-				top: -webkit-calc(-0.75em + 1px);
-				top: -o-calc(-0.75em + 1px);
-				top: -ms-calc(-0.75em + 1px);
-				top: calc(-0.75em + 1px);
-				border-left: solid 0.75em rgba(255,255,255,0);
-				border-right: solid 0.75em rgba(255,255,255,0);
-				border-bottom: solid 0.75em #fff;
+				color: #fff;
 			}
 
+		.dropotron.level-0
+		{
+			margin-top: 2em;
+		}
+		
 			.dropotron.level-0:before
 			{
 				content: '';
 				display: block;
 				position: absolute;
-				left: 1.25em;
-				top: -0.75em;
-				border-left: solid 0.75em rgba(255,255,255,0);
-				border-right: solid 0.75em rgba(255,255,255,0);
-				border-bottom: solid 0.75em #ccc;
+				left: 50%;
+				margin-left: -10px;
+				top: -9px;
+				border-left: solid 10px transparent;
+				border-right: solid 10px transparent;
+				border-bottom: solid 10px #252122;
+				border-bottom-color: rgba(34,30,31,0.98);
 			}
 
-		.dropotron span,
-		.dropotron a
-		{
-			display: block;
-			padding: 0.3em 1em 0.3em 1em;
-			border: 0;
-			border-top: solid 1px #f0f0f0;
-			outline: 0;
-		}
-
-		.dropotron li:first-child > span,
-		.dropotron li:first-child > a
-		{
-			border-top: 0;
-			padding-top: 0;
-		}
-		
-		.dropotron li:hover > span,
-		.dropotron li:hover > a
-		{
-			color: #ed786a;
-			-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-			-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-			-o-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-			-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-			transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		}
-	
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
-	
+
 	#banner
 	{
-		padding: 10em 0 10em 0;
+		position: relative;
+		padding: 8em 0;
+		margin: 4em 0 0 0;
 	}
 	
-		#banner p
+		#banner header
 		{
-			font-size: 2em;
-			line-height: 1.5em;
-			letter-spacing: 4px;
+			display: inline-block;
+			padding: 2.5em 5em;
+			border-radius: 5px;
 		}
 		
-		#banner:before,
-		#banner:after
-		{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 50%;
-			width: 35px;
-			height: 141px;
-			margin-top: -70px;
-			background: url('images/bracket.svg');
-			opacity: 0.15;
-		}
-		
-		#banner:before
-		{
-			left: 0;
-		}
-		
-		#banner:after
-		{
-			right: 0;
-			-moz-transform: scaleX(-1);
-			-webkit-transform: scaleX(-1);
-			-o-transform: scaleX(-1);
-			-ms-transform: scaleX(-1);
-			transform: scaleX(-1);
-		}
-		
+			#banner header h2
+			{
+				font-size: 2.5em;
+				margin: 0 0 0.65em 0;
+			}
+
+			#banner header p
+			{
+				font-size: 1.5em;
+			}
+			
 /*********************************************************************************/
-/* Content                                                                       */
+/* Footer                                                                        */
 /*********************************************************************************/
-	
-	#content
+
+	#footer
 	{
 	}
 
-		#content > section,
-		#content > article
-		{
-			margin: 5em 0 0 0;
-			padding: 5em 0 0 0;
-		}
-		
-		#content > section:first-child,
-		#content > article:first-child
-		{
-			margin: 0;
-			padding: 0;
-		}
-	
 /*********************************************************************************/
-/* Sidebar                                                                       */
+/* Main                                                                          */
 /*********************************************************************************/
-	
-	#sidebar
+
+	#main
 	{
 	}
 
-		#sidebar > section,
-		#sidebar > article
+/*********************************************************************************/
+/* Intro                                                                         */
+/*********************************************************************************/
+
+	#intro
+	{
+		overflow: hidden;
+	}
+	
+		#intro section
 		{
-			margin: 5em 0 0 0;
-			padding: 5em 0 0 0;
+			margin: 3em 0;
+			padding: 2.5em 0;
+		}
+
+		#intro h2
+		{
+			font-size: 1.75em;
 		}
 		
-		#sidebar > section:first-child,
-		#sidebar > article:first-child
+		#intro p
 		{
 			margin: 0;
-			padding: 0;
+		}
+	
+		#intro .middle
+		{
+			position: relative;
+			z-index: 1;
+		}
+		
+			#intro .middle:before
+			{
+				content: '';
+				width: 32px;
+				height: 100%;
+				position: absolute;
+				left: -24px;
+				top: 0;
+				display: block;
+				z-index: -1;
+				box-shadow:		32px 0 0 0 #fff,
+								0 -32px 0 0 #fff,
+								0 32px 0 0 #fff,
+								32px 32px 0 0 #fff,
+								32px -32px 0 0 #fff,
+								0 0 32px 0 rgba(0,0,0,0.15);
+			}
+
+			#intro .middle:after
+			{
+				content: '';
+				width: 32px;
+				height: 100%;
+				position: absolute;
+				right: -24px;
+				top: 0;
+				display: block;
+				z-index: -1;
+				box-shadow:		-32px 0 0 0 #fff,
+								0 -32px 0 0 #fff,
+								0 32px 0 0 #fff,
+								-32px 32px 0 0 #fff,
+								-32px -32px 0 0 #fff,
+								0 0 32px 0 rgba(0,0,0,0.15);
+			}
+		
+		#intro .button
+		{
+			min-width: 12em;
+		}
+
+		#intro footer
+		{
+			margin: 0;
 		}
 
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
-
+		
 	#copyright
 	{
-		margin-top: 6em;
-		padding-top: 4em;
+		margin: 3em 0 2em 0;
 	}
+	
+		#copyright .links
+		{
+			padding: 0.85em 2.25em 0.85em 2.25em;
+		}

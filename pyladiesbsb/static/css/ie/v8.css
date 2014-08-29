@@ -1,5 +1,5 @@
 /*
-	Strongly Typed by HTML5 UP
+	Dopetrope by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -8,49 +8,36 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
+	form input[type=text],
+	form input[type=password],
 	form select,
 	form textarea,
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
 	.button,
-	.box.excerpt .date
+	ul.social li a,
+	.icon.featured,
+	#copyright .links,
+	#nav > ul > li > a,
+	.dropotron
 	{
 		position: relative;
 		-ms-behavior: url('css/ie/PIE.htc');
 	}
 
-	/* Sections/Article */
-	
-		section,
-		article
-		{
-		}
-		
-			section > .last-child,
-			article > .last-child
-			{
-				margin-bottom: 0;
-			}
-
-			section.last-child,
-			article.last-child
-			{
-				margin-bottom: 0;
-			}
-			
-/*********************************************************************************/
-/* Wrappers                                                                      */
-/*********************************************************************************/
-
-	#banner-wrapper
+	.dropotron.level-0
 	{
+		box-shadow: none !important;
 	}
 
-		#banner-wrapper .inner
-		{
-			-ms-behavior: url('css/ie/backgroundsize.min.htc');
-		}
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		background-position: auto;
+		background-size: contain;
+		-ms-behavior: url('css/ie/backgroundsize.min.htc');
+	}

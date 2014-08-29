@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <!--
-	Strongly Typed by HTML5 UP
+	Dopetrope by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>PyLadies BSB</title>
+		<title>PyLadies Brasília</title>
+		<link rel="icon" href="{{url_for('static', filename='images/favicon.ico')}}" type="image/x-icon" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -16,117 +17,181 @@
 		<script src="{{url_for('static', filename='js/skel.min.js')}}"></script>
 		<script src="{{url_for('static', filename='js/skel-layers.min.js')}}"></script>
 		<script src="{{url_for('static', filename='js/init.js')}}"></script>
-
 		<noscript>
 			<link rel="stylesheet" href="{{url_for('static', filename='css/skel.css')}}" />
 			<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
-			<link rel="stylesheet" href="{{url_for('static', filename='css/style-desktop.css')}}" />
+			<link rel="{{url_for('static', filename='stylesheet" href="css/style-desktop.css')}}"/>
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
-		
-	<!-- Header -->
+
+		<!-- Header -->
 			<div id="header-wrapper">
-				<div id="header" class="container">
+				<div id="header">
 					
 					<!-- Logo -->
-						<a href="#"><img src="{{url_for('static', filename='images/logo.png')}}" alt=""/></a>
-
-						<h1 id="logo"><a href="{{url_for('pyladiesbsb.index')}}">Brasília</a></h1>
-						<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
-					
+						<a href="{{url_for('pyladiesbsb.index')}}"><img src="{{url_for('static', filename='images/logo.png')}}" alt="" /></a>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a class="icon fa-home" href="{{url_for('pyladiesbsb.index')}}"><span>Home</span></a></li>
-								<li><a href="{{url_for('pyladiesbsb.log')}}" class="icon fa-sitemap"><span>+PyLadies</span></a>
+								<li class="current">
+									<a href="{{url_for('pyladiesbsb.index')}}"><strong>Home</strong></a></li>
+								<li>
+									<a href="{{url_for('pyladiesbsb.index')}}#main-wrapper"><strong>Sobre</strong></a>
 								</li>
-								<li><a class="icon fa-cog" href="{{url_for('pyladiesbsb.eventos')}}"><span>Eventos</span></a></li>
-								<li><a class="icon fa-retweet" href="{{url_for('pyladiesbsb.contato')}}"><span>Contato</span></a></li>
+								<li>
+									<a href="{{url_for('pyladiesbsb.log')}}">+PyLadies</a>
+								</li>
+								<li>
+									<a href="{{url_for('pyladiesbsb.eventos')}}">Eventos</a>
+								</li>
+								<li><a href="{{url_for('pyladiesbsb.index')}}#footer-wrapper">Contato</a></li>
 							</ul>
 						</nav>
-
 				</div>
 			</div>
 
-		{%block content%}
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div class="container">
+					{%block content%}{%endblock%}
+					
+				</div>
+			</div>
 
-		{%endblock%}
 		<!-- Footer -->
 			<div id="footer-wrapper">
-				<div id="footer" class="container">
-					<header>
-						<h2>Questions or comments? <strong>Get in touch:</strong></h2>
-					</header>
+				<section id="footer" class="container">
 					<div class="row">
-						<div class="6u">
+						<div class="8u">
 							<section>
-								<form method="post" action="#">
-									<div class="row half">
-										<div class="6u">
-											<input name="name" placeholder="Name" type="text" />
-										</div>
-										<div class="6u">
-											<input name="email" placeholder="Email" type="text" />
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<textarea name="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<a href="#" class="form-button-submit button icon fa-envelope">Send Message</a>
-										</div>
-									</div>
-								</form>
+								<header>
+									<h2>Blandit nisl adipiscing</h2>
+								</header>
+								<ul class="dates">
+									<li>
+										<span class="date">Jan <strong>27</strong></span>
+										<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
+										<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+									</li>
+									<li>
+										<span class="date">Jan <strong>23</strong></span>
+										<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
+										<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+									</li>
+									<li>
+										<span class="date">Jan <strong>15</strong></span>
+										<h3><a href="#">Magna tempus lorem feugiat</a></h3>
+										<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
+									</li>
+									<li>
+										<span class="date">Jan <strong>12</strong></span>
+										<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
+										<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+									</li>
+									<li>
+										<span class="date">Jan <strong>10</strong></span>
+										<h3><a href="#">Blandit tempus aliquam?</a></h3>
+										<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
+									</li>
+								</ul>
 							</section>
 						</div>
-						<div class="6u">
+						<div class="4u">
 							<section>
-								<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet 
-								mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur 
-								leo nibh, rutrum eu malesuada.</p>
-								<div class="row">
-									<ul class="icons 6u">
-										<li class="icon fa-home">
-											1234 Somewhere Road<br />
-											Nashville, TN 00000<br />
-											USA
-										</li>
-										<li class="icon fa-phone">
-											(000) 000-0000
-										</li>
-										<li class="icon fa-envelope">
-											<a href="#">info@untitled.tld</a>
-										</li>
-									</ul>
-									<ul class="icons 6u">
-										<li class="icon fa-twitter">
-											<a href="#">@untitled-tld</a>
-										</li>
-										<li class="icon fa-instagram">
-											<a href="#">instagram.com/untitled-tld</a>
-										</li>
-										<li class="icon fa-dribbble">
-											<a href="#">dribbble.com/untitled-tld</a>
-										</li>
-										<li class="icon fa-facebook">
-											<a href="#">facebook.com/untitled-tld</a>
-										</li>
-									</ul>
-								</div>
+								<header>
+									<h2>What's this all about?</h2>
+								</header>
+								<a href="#" class="image featured"><img src="{{url_for('static', filename='images/pic10.jpg')}}" alt="" /></a>
+								<p>
+									This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by 
+									<a href="http://n33.co">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+									the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+								</p>
+								<footer>
+									<a href="{{url_for('pyladiesbsb.signin')}}" class="button">Area restrita</a>
+								</footer>
 							</section>
 						</div>
 					</div>
-				</div>
-				<div id="copyright" class="container">
-					<ul class="links">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
+					<div class="row">
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Tempus consequat</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+									<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+									<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+									<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+									<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+									<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Ipsum et phasellus</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+									<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+									<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+									<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+									<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+									<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Vitae tempor lorem</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+									<li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+									<li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+									<li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+								</ul>
+								<ul class="contact">
+									<li>
+										<h3>Address</h3>
+										<p>
+											Untitled Incorporated<br />
+											1234 Somewhere Road Suite<br />
+											Nashville, TN 00000-0000
+										</p>
+									</li>
+									<li>
+										<h3>Mail</h3>
+										<p><a href="#">someone@untitled.tld</a></p>
+									</li>
+									<li>
+										<h3>Phone</h3>
+										<p>(800) 000-0000</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</section>
 			</div>
 
 	</body>
