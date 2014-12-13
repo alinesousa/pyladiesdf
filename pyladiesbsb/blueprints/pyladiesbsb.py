@@ -1,9 +1,11 @@
 # coding: utf-8
 import os
+
 from werkzeug import secure_filename
 from flask import (
     Blueprint, request, current_app, send_from_directory, render_template
 )
+
 from ..db import get_table
 
 pyladiesbsb_blueprint = Blueprint('pyladiesbsb', __name__)
@@ -17,6 +19,7 @@ def index():
                            logs=todos_os_logs,
                            title=u"Todas as notícias")
 
+
 @pyladiesbsb_blueprint.route("/log")
 @pyladiesbsb_blueprint.route("/log/<int:log_id>")
 def log(log_id=0):
@@ -28,8 +31,9 @@ def log(log_id=0):
         logs = get_table('logs')
         todos_os_logs = logs.all()
         return render_template('log.html',
-                           logs=todos_os_logs,
-                           title=u"Todas as notícias")
+                               logs=todos_os_logs,
+                               title=u"Todas as notícias")
+
 
 @pyladiesbsb_blueprint.route("/logging", methods=["GET", "POST"])
 def logging():
@@ -72,9 +76,11 @@ def signin():
 
     return render_template('signin.html')
 
+
 @pyladiesbsb_blueprint.route("/eventos")
 def eventos():
     return render_template('eventos.html')
+
 
 @pyladiesbsb_blueprint.route('/media/<path:filename>')
 def media(filename):

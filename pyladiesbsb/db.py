@@ -1,7 +1,9 @@
 # coding: utf-8
 from os import path
+
 from flask import current_app
 import dataset
+
 
 def get_table(tablename):
     database_name = current_app.config['DATABASE_NAME']

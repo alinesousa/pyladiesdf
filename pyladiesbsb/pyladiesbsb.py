@@ -1,6 +1,8 @@
 # coding: utf-8
 from os import path
+
 from flask import Flask
+
 from .blueprints.pyladiesbsb import pyladiesbsb_blueprint
 
 
