@@ -1,3 +1,3 @@
-https://github.com/mitsuhiko/flask/tarball/master
+flask
 dataset
 nose
