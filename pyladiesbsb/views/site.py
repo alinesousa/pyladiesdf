@@ -6,12 +6,12 @@ from flask import (
     Blueprint, request, current_app, send_from_directory, render_template
 )
 
-from ..db import get_table
+from pyladiesbsb.models import get_table
 
-pyladiesbsb_blueprint = Blueprint('pyladiesbsb', __name__)
+site = Blueprint('site', __name__)
 
 
-@pyladiesbsb_blueprint.route("/")
+@site.route("/")
 def index():
     logs = get_table('logs')
     todos_os_logs = logs.all()
@@ -20,8 +20,8 @@ def index():
                            title=u"Todas as notícias")
 
 
-@pyladiesbsb_blueprint.route("/log")
-@pyladiesbsb_blueprint.route("/log/<int:log_id>")
+@site.route("/log")
+@site.route("/log/<int:log_id>")
 def log(log_id=0):
     if log_id:
         logs = get_table('logs')
@@ -35,7 +35,7 @@ def log(log_id=0):
                                title=u"Todas as notícias")
 
 
-@pyladiesbsb_blueprint.route("/logging", methods=["GET", "POST"])
+@site.route("/logging", methods=["GET", "POST"])
 def logging():
     logs = get_table('logs')
     if request.method == "POST":
@@ -56,7 +56,7 @@ def logging():
     return render_template('logging.html')
 
 
-@pyladiesbsb_blueprint.route("/signin", methods=["GET", "POST"])
+@site.route("/signin", methods=["GET", "POST"])
 def signin():
     logs = get_table('logs')
     if request.method == "POST":
@@ -77,11 +77,11 @@ def signin():
     return render_template('signin.html')
 
 
-@pyladiesbsb_blueprint.route("/eventos")
+@site.route("/eventos")
 def eventos():
     return render_template('eventos.html')
 
 
-@pyladiesbsb_blueprint.route('/media/<path:filename>')
+@site.route('/media/<path:filename>')
 def media(filename):
     return send_from_directory(current_app.config.get('MEDIA_ROOT'), filename)

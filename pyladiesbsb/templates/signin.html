@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {%block content%}
-<form method="post" class="login" action="{{url_for('pyladiesbsb.signin')}}" enctype="multipart/form-data">
+<form method="post" class="login" action="{{url_for('site.signin')}}" enctype="multipart/form-data">
    <div>
    <label><h3>E-mail:</h3>
         <input type="email" name="email" id="email" />

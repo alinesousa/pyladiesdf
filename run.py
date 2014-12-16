@@ -1,8 +1,12 @@
-import sys
+# -*- coding: utf-8 -*-
+import os
 
-from pyladiesbsb.pyladiesbsb import create_app
+
+os.environ.setdefault('APP_CONFIG_FILE',
+                      os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                                   'config/development.py')))
+
+from pyladiesbsb import app
 
 
-mode = sys.argv[1] if len(sys.argv) > 1 else 'development'
-app = create_app(mode=mode)
-app.run(**app.config.get_namespace('RUN_'))
+app.run()
