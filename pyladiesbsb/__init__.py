@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 from flask import Flask
+
 from .views.site import site
 
 
-app = Flask(__name__)
+def create_app(config_file):
 
-app.config.from_object('config.default')
+    app = Flask(__name__)
 
-app.config.from_envvar('APP_CONFIG_FILE')
+    app.config.from_object('config.default')
 
-app.register_blueprint(site)
+    app.config.from_pyfile(config_file)
+
+    app.register_blueprint(site)
+
+    return app
