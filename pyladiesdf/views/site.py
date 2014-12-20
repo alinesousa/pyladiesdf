@@ -6,7 +6,7 @@ from flask import (
     Blueprint, request, current_app, send_from_directory, render_template
 )
 
-from pyladiesbsb.models import get_table
+from pyladiesdf.models import get_table
 
 site = Blueprint('site', __name__)
 

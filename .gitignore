@@ -10,3 +10,7 @@ man/
 .idea/
 *.zip
 *.rar
+/build
+/Include
+/Lib
+/Scripts
